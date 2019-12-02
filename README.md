@@ -1,2 +1,2 @@
-# minium_poc
+# Project minium_poc
 PoC using minium.vilt.io
