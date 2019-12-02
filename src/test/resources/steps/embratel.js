@@ -15,10 +15,11 @@ When(/^Busca no Sebrae (.*)$/, function (query) {
 });
 
 /////////////////////////////////////////////////////////////////////////////
-//Embratel
+//Testes Sites
 
 Then(/^Site is ok$/, function () {
   // OK
+  browser.screenshot().asBytes();
 });
 
 
