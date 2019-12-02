@@ -1,16 +1,15 @@
-# Web Drivers   
-minium:
-  webdriver:
-    desiredCapabilities:
-      browserName: chrome
-    window:
-      maximized: true
+# language: en
+# ------------------------------------------------------------------------------
+Feature: Search results
 
-# Configuration that can be injected in your tests
-  config:
-    HOME_URL: https://www.embratel.com.br/
-    searches:
-      Minium Github:
-        - https://github.com/viltgroup/minium
-      Selenium:
-        - http://www.seleniumhq.org/
+  Scenario: Mostrar Home Embratel
+    Given I'm at https://www.embratel.com.br/
+    Then Site is ok
+
+  Scenario: Busca no Portal Sebrae
+    Given I'm at https://www.sebrae.com.br/sites/PortalSebrae
+    When Busca no Sebrae Nota Fiscal
+
+  Scenario: Abrir Embratel & Clicar A Embratel
+    Given I'm at https://www.embratel.com.br/
+    Then Open Internet A Embratel
