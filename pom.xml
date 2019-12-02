@@ -12,7 +12,7 @@
 	</parent>
 
 	<groupId>com.minium</groupId>
-	<artifactId>minium-embratel</artifactId>
+	<artifactId>minium-poc</artifactId>
 	<version>1.0.0</version>
 
 </project>
