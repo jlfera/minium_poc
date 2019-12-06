@@ -1,5 +1,7 @@
 var timeUnits = require("minium/timeunits");
 
+var base;
+
 World(function () {
   browser.configure()
     .defaultTimeout(5, timeUnits.SECONDS)
@@ -10,12 +12,11 @@ World(function () {
     .done()
     .interactionListeners()
       .add(minium.interactionListeners.onStaleElementReference().thenRetry())
-      //.add(minium.interactionListeners.onUnhandledAlert().accept())
-      //.add(minium.interactionListeners.ensureUnexistence($(".loading")).withWaitingPreset("slow"))
-      //.add(minium.interactionListeners.onTimeout().when($(".loading")).waitForUnexistence($(".loading")).withWaitingPreset("slow").thenRetry())
     .done();
+
+  base = $(":root");
+
 }, function() {
-  browser.configure()
-    .interactionListeners()
-      .clear();
+  browser.configure().interactionListeners().clear();
+  base = undefined;
 });
