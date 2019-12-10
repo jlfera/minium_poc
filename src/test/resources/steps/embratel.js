@@ -1,3 +1,4 @@
+var keys = require("minium/keys");
 
 function specialFill(fld, value) {
   fld.apply(function(value) { $(this).val(value); }, [ value ]);
@@ -128,9 +129,7 @@ Then(/^I check that the form has no values$/, function() {
 When(/^I search for "([^"]*)"$/, function(arg1) {
   var input = base.find("input").withName("q");
   input.fill(arg1);
-  
-  var button = base.find("input").withName("btnK");
-  button.click();
+  input.sendKeys(keys.ENTER);
 });
 
 Then(/^A link for "([^"]*)" is displayed$/, function (query) {
