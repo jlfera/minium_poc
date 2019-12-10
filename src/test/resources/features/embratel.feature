@@ -1,10 +1,10 @@
 # language: en
 # ------------------------------------------------------------------------------
-Feature: Search results
+Feature: Embratel Demo
 
   Scenario: Mostrar Home page Embratel
     Given I'm at "https://www.embratel.com.br/"
-    Then Site is ok
+    Then I can see the Embratel homepage
 
   Scenario Outline: Abrir links do header
     Given I'm at "https://www.embratel.com.br/"

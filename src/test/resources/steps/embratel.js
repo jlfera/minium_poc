@@ -4,12 +4,11 @@ function specialFill(fld, value) {
   fld.apply(function(value) { $(this).val(value); }, [ value ]);
 }
 
-
 Given(/^I'm at "([^"]*)"$/, function (url) {
   browser.get(url);
 });
 
-Then(/^Site is ok$/, function () {
+Then(/^I can see the Embratel homepage$/, function () {
   // Header
   var header = base.find(".header");
   expect(header.find(".list-menu-item").withText("A Embratel")).to.exist();
