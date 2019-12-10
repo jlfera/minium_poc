@@ -8,9 +8,7 @@ minium:
 
 # Configuration that can be injected in your tests
   config:
-    HOME_URL: https://www.embratel.com.br/
+    base_url: https://www.embratel.com.br/
     searches:
-      Minium Github:
-        - https://github.com/viltgroup/minium
-      Selenium:
-        - http://www.seleniumhq.org/
+      Embratel:
+        - http://www.embratel.com.br/
